@@ -22,11 +22,11 @@ npm start
 
 SCREENSHOTS: ----------------------------------------------------------------------
 
-![Build Output Screenshot](public/screenshots/BuildOutput.png)
+![Build Output Screenshot](./public/screenshots/BuildOutput.png)
 
-![Lazy Loaded Chunk Before Screenshot](public/screenshots/LazyLoadedBefore.png)
+![Lazy Loaded Chunk Before Screenshot](./public/screenshots/LazyLoadedBefore.png)
 
-![Lazy Loaded Chunk After Screenshot](public/screenshots/LazyLoadedAfter.png)
+![Lazy Loaded Chunk After Screenshot](./public/screenshots/LazyLoadedAfter.png)
 
 
 Reflection Answers: ----------------------------------------------------------------------
