@@ -20,6 +20,7 @@ Run the production build:
 npm run build
 npm start
 
+Live demo can be found at https://vercel.com/tyler-snyder-s-vercel/react-task-manager
 SCREENSHOTS: ----------------------------------------------------------------------
 
 ![Build Output Screenshot](./nextjs-task-manager/public/screenshots/BuildOutput.png)
