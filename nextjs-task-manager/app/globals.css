@@ -1,0 +1,218 @@
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --ink: #1f2a44;
+  --muted: #5b6475;
+  --line: #d8dde6;
+  --accent: #2f5bd3;
+  --accent-ink: #ffffff;
+  --done: #2e7d5b;
+  --danger: #b3261e;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-name {
+  margin: 0;
+  font-weight: 700;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.site-header a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-header a:hover {
+  text-decoration: underline;
+}
+
+.site-main {
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 1.25rem;
+}
+
+/* Task form */
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+
+.button-secondary {
+  margin-top: 1.25rem;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.button-delete {
+  padding: 0.3rem 0.6rem;
+  background: transparent;
+  color: var(--danger);
+  font-weight: 500;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Task list */
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.task-item input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--done);
+}
+
+.task-item.is-done span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.empty {
+  color: var(--muted);
+}
+/* Tips panel */
+.tips-panel {
+  padding: 0 20px;
+  padding-bottom: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-style: italic;
+}
+
+.tips-panel h2 {
+  font-style: normal;
+}
+
+.tips-panel small {
+  color: var(--danger);
+  font-style: italic;
+}
+
+/* Stats panel */
+.task-stats {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.task-stats p {
+  margin: 0 0 0.5rem;
+}
+
+.progress {
+  height: 0.5rem;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--done);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 30rem) {
+  .task-form {
+    flex-direction: column;
+  }
+}
